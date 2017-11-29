@@ -23,4 +23,9 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,UpdateStock.class);
         this.startActivity(intent);
     }
+
+    public void QtCheck(View view) {
+        Intent intent = new Intent(this,QuantityCheck.class);
+        this.startActivity(intent);
+    }
 }

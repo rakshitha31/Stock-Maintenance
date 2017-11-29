@@ -57,6 +57,7 @@
         android:layout_marginTop="24dp"
         android:layout_weight="1"
         android:elevation="10dp"
+        android:onClick="QtCheck"
         android:text="Check Quantity"
         android:textAllCaps="false"
         android:textSize="28sp" />
