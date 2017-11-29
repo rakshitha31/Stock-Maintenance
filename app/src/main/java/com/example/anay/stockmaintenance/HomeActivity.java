@@ -18,4 +18,14 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this,NewBill.class);
         this.startActivity(intent);
     }
+    public void Click(View view) //onCLick Listener for going to another activity named UpdateStock
+    {
+        Intent intent = new Intent(this,UpdateStock.class);
+        this.startActivity(intent);
+    }
+
+    public void QtCheck(View view) {
+        Intent intent = new Intent(this,QuantityCheck.class);
+        this.startActivity(intent);
+    }
 }
