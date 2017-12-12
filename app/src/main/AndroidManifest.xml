@@ -20,7 +20,11 @@
         <activity
             android:name=".NewBill"
             android:label="@string/title_activity_new_bill"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ItemModel" />
+        <activity android:name=".OldBill" />
+        <activity android:name=".UpdateStock" />
+        <activity android:name=".CheckQuantity"></activity>
     </application>
 
 </manifest>
