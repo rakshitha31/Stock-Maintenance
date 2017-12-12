@@ -7,25 +7,41 @@ import android.view.View;
 import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
-
+Button nb,ob,us,cq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-    }
-    public void act(View view)
-    {
-        Intent intent = new Intent(this,NewBill.class);
-        this.startActivity(intent);
-    }
-    public void Click(View view) //onCLick Listener for going to another activity named UpdateStock
-    {
-        Intent intent = new Intent(this,UpdateStock.class);
-        this.startActivity(intent);
+
+        Button nb,ob,us,cq;
+        nb=findViewById(R.id.newbill);
+        nb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, NewBill.class));
+            }
+        });
+        ob=findViewById(R.id.oldbill);
+        ob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, OldBill.class));
+            }
+        });
+        us=findViewById(R.id.update);
+        us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, UpdateStock.class));
+            }
+        });
+        cq=findViewById(R.id.check);
+        cq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, CheckQuantity.class));
+            }
+        });
     }
 
-    public void QtCheck(View view) {
-        Intent intent = new Intent(this,QuantityCheck.class);
-        this.startActivity(intent);
-    }
 }
