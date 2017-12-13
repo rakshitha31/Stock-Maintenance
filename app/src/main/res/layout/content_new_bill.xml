@@ -8,10 +8,13 @@
     tools:context="com.example.anay.stockmaintenance.NewBill"
     tools:showIn="@layout/activity_new_bill">
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
+        android:layout_width="383dp"
+        android:layout_height="510dp"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>
