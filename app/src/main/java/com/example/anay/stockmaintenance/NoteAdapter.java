@@ -12,14 +12,13 @@ import java.util.*;
  */
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ItemViewHolder> {
-   ArrayList<ItemModel> itemlist ;
+   static ArrayList<ItemModel> itemlist ;
     class ItemViewHolder extends RecyclerView.ViewHolder{
-        public TextView name,quantity,price;
+        public TextView name,quantity;
          public ItemViewHolder(View view){
              super(view);
              name = (TextView) view.findViewById(R.id.name);
              quantity = (TextView) view.findViewById(R.id.quantity);
-             price = (TextView) view.findViewById(R.id.price);
          }
     }
     public NoteAdapter(ArrayList<ItemModel> itemlist)
