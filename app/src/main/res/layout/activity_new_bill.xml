@@ -46,7 +46,7 @@
 
     <Button
         android:id="@+id/print"
-        android:layout_width="240dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/fab"
         android:layout_marginBottom="20dp"
@@ -55,6 +55,6 @@
         android:layout_toStartOf="@+id/fab"
         android:text="Print"
         app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="bottom|center" />
+        app:layout_anchorGravity="bottom|center_horizontal" />
 
 </android.support.design.widget.CoordinatorLayout>
