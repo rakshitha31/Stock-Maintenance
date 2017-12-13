@@ -24,7 +24,8 @@
         <activity android:name=".ItemModel" />
         <activity android:name=".OldBill" />
         <activity android:name=".UpdateStock" />
-        <activity android:name=".CheckQuantity"></activity>
+        <activity android:name=".CheckQuantity" />
+        <activity android:name=".Bill"></activity>
     </application>
 
 </manifest>
