@@ -9,9 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.google.gson.Gson;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -41,8 +39,8 @@ public class AddItem extends AppCompatActivity {
                 String quantity=quantityid.getText().toString();
                 auth_sharedPref=getApplicationContext().getSharedPreferences(getString(R.string.auth_sharedpref), Context.MODE_PRIVATE);
 
-                String saved_name = auth_sharedPref.getString(getString(R.string.key_name), "");
-                String saved_quantity = auth_sharedPref.getString(getString(R.string.key_quantity), "");
+                //String saved_name = auth_sharedPref.getString(getString(R.string.key_name), "");
+                //String saved_quantity = auth_sharedPref.getString(getString(R.string.key_quantity), "");
 
 
                 if(name.isEmpty()||quantity.isEmpty())

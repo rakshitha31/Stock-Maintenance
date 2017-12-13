@@ -10,6 +10,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.gson.Gson;
 
@@ -22,7 +23,7 @@ public class NewBill extends AppCompatActivity {
      static ArrayList<ItemModel> itemlist = new ArrayList<>();
      RecyclerView recyclerView;
      NoteAdapter itemAdapter;
-
+     Button print;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,15 @@ public class NewBill extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(NewBill.this, AddItem.class));
+            }
+        });
+
+
+        print = (Button)findViewById(R.id.print);
+        print.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               startActivity(new Intent(NewBill.this, Bill.class));
             }
         });
     }
@@ -65,4 +75,5 @@ public class NewBill extends AppCompatActivity {
         }
         return itemlist;
     }
+
 }
