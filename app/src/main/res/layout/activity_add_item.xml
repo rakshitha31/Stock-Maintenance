@@ -40,7 +40,7 @@
         android:layout_marginRight="48dp"
         android:layout_marginTop="60dp"
         android:layout_weight="1"
-        android:text="Add" />
+        android:text=" Add To Bill" />
 
 
 </LinearLayout>

@@ -51,7 +51,7 @@ public class NewBill extends AppCompatActivity {
         print.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewBill.this, PrintBill.class));
+                startActivity(new Intent(NewBill.this, Bill.class));
             }
         });
     }
