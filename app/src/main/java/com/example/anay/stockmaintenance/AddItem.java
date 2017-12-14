@@ -1,8 +1,6 @@
 package com.example.anay.stockmaintenance;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +17,7 @@ public class AddItem extends AppCompatActivity {
     Button add;
     EditText nameid,quantityid;
     String name,quantity;
-    SharedPreferences auth_sharedPref;
+    //SharedPreferences auth_sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +35,11 @@ public class AddItem extends AppCompatActivity {
                 //get name and quantity fron user
                 String name=nameid.getText().toString();
                 String quantity=quantityid.getText().toString();
-                auth_sharedPref=getApplicationContext().getSharedPreferences(getString(R.string.auth_sharedpref), Context.MODE_PRIVATE);
+                //auth_sharedPref=getApplicationContext().getSharedPreferences(getString(R.string.auth_sharedpref), Context.MODE_PRIVATE);
 
-                String saved_name = auth_sharedPref.getString(getString(R.string.key_name), "");
-                String saved_quantity = auth_sharedPref.getString(getString(R.string.key_quantity), "");
+                //String saved_name = auth_sharedPref.getString(getString(R.string.key_name), "");
+                //
+                // String saved_quantity = auth_sharedPref.getString(getString(R.string.key_quantity), "");
 
 
                 if(name.isEmpty()||quantity.isEmpty())

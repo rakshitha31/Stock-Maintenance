@@ -63,7 +63,7 @@
         android:layout_weight="1"
         android:elevation="10dp"
         android:padding="5dp"
-        android:text="Check Quantity"
+        android:text="Stock List"
         android:textAllCaps="false"
         android:textSize="28sp" />
 
