@@ -60,7 +60,6 @@ public class Bill extends AppCompatActivity {
         });
     }
 
-
     public ArrayList<ItemModel> readFromFile(){
         String filename="Items.txt";
         ArrayList<ItemModel> itemlist = new ArrayList<>();
