@@ -51,7 +51,10 @@ public class NewBill extends AppCompatActivity {
         print.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NewBill.this, Bill.class));
+
+            
+               startActivity(new Intent(NewBill.this, Bill.class));
+
             }
         });
     }
@@ -75,4 +78,5 @@ public class NewBill extends AppCompatActivity {
         }
         return itemlist;
     }
+
 }
