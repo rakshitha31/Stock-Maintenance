@@ -20,6 +20,7 @@ import java.util.*;
 public class Bill extends AppCompatActivity {
     static ArrayList<ItemModel> itemlist = new ArrayList<>();
     static ArrayList<ItemModel> stocklist = new ArrayList<>();
+    static ArrayList<ItemModel> billlist = new ArrayList<>();
     RecyclerView recyclerView;
     NoteAdapter itemAdapter;
     Button home;
@@ -58,11 +59,31 @@ public class Bill extends AppCompatActivity {
                 startActivity(new Intent(Bill.this, HomeActivity.class));
             }
         });
+        setContentView(R.layout.activity_new_bill);
+
+        billlist = readFromFile();
+
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        itemAdapter= new NoteAdapter(billlist);
+        recyclerView.setAdapter(itemAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //home = (Button)findViewById(R.id.backtohome);
+        //home.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+          //  public void onClick(View view) {
+            //    startActivity(new Intent(Bill.this, HomeActivity.class));
+            //}
+        //});
     }
 
     public ArrayList<ItemModel> readFromFile(){
         String filename="Items.txt";
+
         ArrayList<ItemModel> itemlist = new ArrayList<>();
+
+        ArrayList<ItemModel> billlist = new ArrayList<>();
+
         Gson gson=new Gson();
         try{
             File file=new File(getApplicationContext().getFilesDir(),filename);
@@ -70,6 +91,7 @@ public class Bill extends AppCompatActivity {
             BufferedReader br=new BufferedReader(new FileReader(file));
             while((line=br.readLine())!=null){
                 ItemModel item=gson.fromJson(line,ItemModel.class);
+
                 itemlist.add(item);
                 writeToFile(item);
             }
@@ -80,6 +102,17 @@ public class Bill extends AppCompatActivity {
             e.getMessage();
         }
         return itemlist;
+
+                billlist.add(item);
+                writeToFile(item);
+            }
+            br.close();
+            file.delete();
+        }catch (Exception e){
+            e.getMessage();
+        }
+        return billlist;
+
     }
     public void writeToFile(ItemModel item){
         String filename="Bills.txt";
@@ -95,6 +128,7 @@ public class Bill extends AppCompatActivity {
             e.getMessage();
         }
     }
+
     public ArrayList<ItemModel> readFromStock(){
         String filename="Stock.txt";
         File file=new File(getApplicationContext().getFilesDir(),filename);
@@ -129,3 +163,6 @@ public class Bill extends AppCompatActivity {
         }
     }
 }
+
+}
+

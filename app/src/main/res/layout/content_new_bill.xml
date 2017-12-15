@@ -12,9 +12,16 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="396dp"
+
         android:layout_height="431dp"
         android:scrollbars="vertical"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="8dp" />
+
+        android:layout_height="448dp"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-9dp" />
+
 
 </android.support.constraint.ConstraintLayout>

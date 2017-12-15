@@ -8,8 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.google.gson.Gson;
-
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -41,8 +39,6 @@ public class AddItem extends AppCompatActivity {
                 //get name and quantity fron user
                 String name=nameid.getText().toString();
                 String quantity=quantityid.getText().toString();
-                //auth_sharedPref=getApplicationContext().getSharedPreferences(getString(R.string.auth_sharedpref), Context.MODE_PRIVATE);
-
                 //String saved_name = auth_sharedPref.getString(getString(R.string.key_name), "");
                 //
                 // String saved_quantity = auth_sharedPref.getString(getString(R.string.key_quantity), "");
